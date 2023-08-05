@@ -7,6 +7,9 @@ constexpr int servoPin = 10;
 
 Servo myservo;
 
+// wokwi prototype
+// https://wokwi.com/projects/372202970899125249
+
 void setup() {
   Serial.begin(115200);
   myservo.attach(servoPin);
