@@ -1,8 +1,8 @@
 #include <Servo.h>
 #include "Button.hpp"
 
-constexpr int clockRotPin = 7;
-constexpr int anticRotPin = 8;
+constexpr int clockRotPin = 8;
+constexpr int anticRotPin = 7;
 constexpr int servoPin = 10;
 
 Servo myservo;
@@ -22,9 +22,9 @@ void loop() {
   static int angle = myservo.read() * D2V;
 
   if (clockPush.isPressed()) {
-    angle = max(angle - 1, 0);
-  } else if (anticPush.isPressed()) {
     angle = min(angle + 1, MAX_VALUE);
+  } else if (anticPush.isPressed()) {
+    angle = max(angle - 1, 0);
   }
 
   myservo.write(angle * V2D);
