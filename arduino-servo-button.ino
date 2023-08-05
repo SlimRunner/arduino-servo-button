@@ -1,6 +1,5 @@
 #include <Servo.h>
 #include "Button.hpp"
-#include "utilities.hpp"
 
 constexpr int clockRotPin = 7;
 constexpr int anticRotPin = 8;
